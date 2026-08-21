@@ -1,0 +1,454 @@
+/* ================================= */
+/* PÁGINA */
+/* ================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eceff1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/* ================================= */
+/* ENCABEZADO */
+/* ================================= */
+
+body > header {
+    background-color: #263238;
+    padding: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+body > header img {
+    max-width: 100px;
+    height: auto;
+}
+
+
+/* ================================= */
+/* FRASE */
+/* ================================= */
+
+#frase {
+    background-color: #cfd8dc;
+    padding: 20px;
+    text-align: center;
+    color: #263238;
+}
+
+#frase h2 {
+    margin: 0;
+}
+
+
+/* ================================= */
+/* MODELOS */
+/* ================================= */
+
+#modelos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+#modelos article {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 2px 5px #cfd8dc;
+}
+
+#modelos article h3 {
+    color: #263238;
+}
+
+#modelos img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+#modelos button {
+    background-color: #1f7679;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#modelos button:hover {
+    background-color: #006064;
+}
+
+
+/* ================================= */
+/* CONTENEDOR PRINCIPAL */
+/* ================================= */
+
+#contenido {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    width: 100%;
+}
+
+
+/* ================================= */
+/* FORMULARIO */
+/* ================================= */
+
+#formulario {
+    background-color: #263238;
+    padding: 40px;
+    width: calc(50% - 15px);
+    border-radius: 10px;
+}
+
+
+/* ================================= */
+/* SECCIONES DEL FORMULARIO */
+/* ================================= */
+
+#formulario fieldset {
+    border: 1px solid #1f7679;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 0 0 20px 0;
+}
+
+
+/* Títulos */
+
+#formulario legend {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+/* Etiquetas */
+
+#formulario label {
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: block;
+}
+
+
+/* Campos */
+
+#formulario input {
+    border: 1px solid #1f7679;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#formulario textarea {
+    border: 1px solid #1f7679;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Select */
+
+#formulario select {
+    width: 250px;
+    max-width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #1f7679;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+/* Botones */
+
+#formulario button {
+    background-color: #1f7679;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#formulario button:hover {
+    background-color: #006064;
+}
+
+
+/* ================================= */
+/* ================================= */
+/* VISTA PREVIA */
+/* ================================= */
+
+#seccion-vista-previa {
+    width: calc(50% - 15px);
+    min-width: 0;
+    
+    /* 1. Hacemos sticky a toda la columna derecha */
+    position: sticky;
+    top: 20px;
+    
+    /* 2. Permite que el sticky se active correctamente en flexbox */
+    align-self: flex-start;
+}
+
+#seccion-vista-previa > h2 {
+    text-align: center;
+    color: #263238;
+    margin-top: 0;
+}
+
+/* CV */
+
+#vista-previa {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #cfd8dc;
+    
+    /* Dejá position en static o quitalo, ya que el sticky lo maneja el padre */
+    position: static;
+    transition: all .3s ease;
+}
+
+
+/* ================================= */
+/* ENCABEZADO DEL CV */
+/* ================================= */
+
+#cv-encabezado {
+    background-color: #1f7679;
+    padding: 30px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#cv-nombre {
+    margin: 0;
+}
+
+#cv-profesion {
+    margin-top: 10px;
+}
+
+
+/* ================================= */
+/* CONTACTO */
+/* ================================= */
+
+#cv-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#cv-contacto p {
+    margin: 5px;
+}
+
+
+/* ================================= */
+/* SECCIONES DEL CV */
+/* ================================= */
+
+#vista-previa section {
+    padding: 15px;
+    border-bottom: 1px solid #cfd8dc;
+}
+
+#vista-previa h3 {
+    color: #1f7679;
+}
+
+
+/* Texto */
+
+#vista-previa p {
+    color: #263238;
+}
+
+
+/* ================================= */
+/* PIE DE PÁGINA */
+/* ================================= */
+
+footer {
+    background-color: #263238;
+    padding: 30px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+footer img {
+    max-width: 100px;
+    height: auto;
+}
+
+
+/* ================================= */
+/* TABLETS */
+/* ================================= */
+
+@media (max-width: 900px) {
+
+    #contenido {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    #formulario {
+        padding: 25px;
+        width: calc(50% - 10px);
+    }
+
+    #seccion-vista-previa {
+        width: calc(50% - 10px);
+    }
+
+    #vista-previa {
+        padding: 25px;
+    }
+}
+
+
+/* ================================= */
+/* CELULARES */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+    #contenido {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #formulario {
+        width: 100%;
+        padding: 25px;
+    }
+
+    #seccion-vista-previa {
+        width: 100%;
+    }
+
+    /*
+       En celular quitamos sticky porque
+       las dos columnas pasan a ser una sola.
+    */
+
+    #vista-previa {
+        position: static;
+        width: 100%;
+        padding: 25px;
+    }
+
+    #modelos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #modelos article {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #cv-contacto {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+
+/* ================================= */
+/* CELULARES PEQUEÑOS */
+/* ================================= */
+
+@media (max-width: 480px) {
+
+    body > header {
+        padding: 20px;
+    }
+
+    body > header h1 {
+        font-size: 25px;
+    }
+
+    body > header p {
+        font-size: 15px;
+    }
+
+    #frase {
+        padding: 15px;
+    }
+
+    #frase h2 {
+        font-size: 20px;
+    }
+
+    #modelos {
+        padding: 20px;
+    }
+
+    #formulario {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #formulario fieldset {
+        padding: 15px;
+    }
+
+    #formulario legend {
+        font-size: 18px;
+    }
+
+    #vista-previa {
+        padding: 15px;
+    }
+
+    #cv-encabezado {
+        padding: 20px;
+    }
+
+    #cv-nombre {
+        font-size: 25px;
+    }
+
+    #cv-profesion {
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
