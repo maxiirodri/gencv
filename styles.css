@@ -1,5 +1,6 @@
-/* 
-   CONFIGURACIÓN GENERAL*/
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+   ========================================== */
 
 * {
     box-sizing: border-box;
@@ -11,8 +12,9 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
-/* ENCABEZADO */
+/* ==========================================
+   ENCABEZADO Y FRASE
+   ========================================== */
 
 header {
     background-color: #263238;
@@ -26,9 +28,6 @@ header img {
     height: auto;
 }
 
-
-/* FRASE */
-
 #frase {
     background-color: #cfd8dc;
     padding: 20px;
@@ -38,10 +37,12 @@ header img {
 
 #frase h2 {
     margin: 0;
+    font-size: 22px;
 }
 
-
-/* MODELOS DE CURRÍCULUM */
+/* ==========================================
+   OPCIONES DE MODELOS
+   ========================================== */
 
 #modelos {
     display: flex;
@@ -50,7 +51,6 @@ header img {
     gap: 30px;
     padding: 30px;
     flex-wrap: wrap;
-   
 }
 
 #modelos article {
@@ -60,13 +60,17 @@ header img {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 5px #cfd8dc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#modelos article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 #modelos article h3 {
     color: #263238;
-    
-  
-    
+    margin-top: 0;
 }
 
 #modelos img {
@@ -84,15 +88,17 @@ header img {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    
+    font-weight: bold;
+    transition: background-color 0.2s ease;
 }
 
 #modelos button:hover {
     background-color: #006064;
 }
 
-
-/* CONTENEDOR PRINCIPAL */
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+   ========================================== */
 
 #contenido {
     display: flex;
@@ -102,8 +108,9 @@ header img {
     padding: 30px;
 }
 
-
-/* FORMULARIO */
+/* ==========================================
+   FORMULARIO
+   ========================================== */
 
 #formulario {
     width: calc(50% - 15px);
@@ -111,8 +118,6 @@ header img {
     background-color: #263238;
     border-radius: 10px;
 }
-
-/* SECCIONES DEL FORMULARIO */
 
 #formulario fieldset {
     margin: 0 0 20px;
@@ -122,9 +127,10 @@ header img {
 }
 
 #formulario legend {
-    padding: 5px;
+    padding: 0 10px;
     color: #ffffff;
     font-size: 20px;
+    font-weight: bold;
 }
 
 #formulario label {
@@ -132,16 +138,15 @@ header img {
     padding-top: 10px;
     padding-bottom: 5px;
     color: #ffffff;
+    font-size: 14px;
 }
-
-
-/* CAMPOS DEL FORMULARIO */
 
 #formulario input,
 #formulario textarea,
 #formulario select {
     border: 1px solid #1f7679;
     border-radius: 10px;
+    font-size: 14px;
 }
 
 #formulario input {
@@ -161,13 +166,12 @@ header img {
 #formulario select {
     width: 250px;
     max-width: 100%;
-    height: 35px;
-    padding: 5px;
+    height: 38px;
+    padding: 5px 10px;
     margin-bottom: 10px;
+    background-color: #ffffff;
 }
 
-
-/* BOTONES DEL FORMULARIO */
 #formulario button {
     margin-top: 10px;
     padding: 10px 15px;
@@ -176,20 +180,37 @@ header img {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 #formulario button:hover {
     background-color: #006064;
 }
 
+/* Estilo para botón Quitar de bloques dinámicos */
+.btn-eliminar-item {
+    background-color: #c62828 !important;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px !important;
+    font-size: 12px;
+    cursor: pointer;
+    float: right;
+    transition: background-color 0.2s ease;
+}
 
-/* COLUMNA DE VISTA PREVIA */
+.btn-eliminar-item:hover {
+    background-color: #b71c1c !important;
+}
+
+/* ==========================================
+   COLUMNA Y CONTENEDOR VISTA PREVIA
+   ========================================== */
 
 #seccion-vista-previa {
     width: calc(50% - 15px);
     min-width: 0;
-
-    /* Mantiene la vista previa visible al desplazarse */
     position: sticky;
     top: 20px;
     align-self: flex-start;
@@ -201,21 +222,18 @@ header img {
     color: #263238;
 }
 
-
-/* VISTA PREVIA DEL CV */
-
 #vista-previa {
     width: 100%;
+    min-height: 500px;
     padding: 40px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 2px 8px #cfd8dc;
-    position: static;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    word-wrap: break-word;
 }
 
-/* ENCABEZADO DEL CV */
-
+/* ENCABEZADO BASE DEL CV */
 #cv-encabezado {
     padding: 30px;
     background-color: #1f7679;
@@ -224,76 +242,69 @@ header img {
     border-radius: 10px;
 }
 
+#cv-foto-perfil {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 #cv-nombre {
     margin: 0;
+    font-size: 28px;
 }
 
 #cv-profesion {
-    margin-top: 10px;
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    font-weight: 400;
 }
-
-/* CONTACTO DEL CV */
 
 #cv-contacto {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 #cv-contacto p {
-    margin: 5px;
+    margin: 0;
 }
 
-
-/* SECCIONES DEL CV */
-
+/* SECCIONES BASE DEL CV */
 #vista-previa section {
-    padding: 15px;
+    padding: 15px 0;
     border-bottom: 1px solid #cfd8dc;
 }
 
+#vista-previa section:last-of-type {
+    border-bottom: none;
+}
+
 #vista-previa h3 {
+    margin: 0 0 10px 0;
     color: #1f7679;
+    font-size: 18px;
 }
 
 #vista-previa p {
+    margin: 0;
     color: #263238;
+    line-height: 1.5;
 }
 
-
-/* FOTO DE PERFIL */
-
-#cv-foto-perfil {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 15px;
-    object-fit: cover;
-}
-
-
-/* PIE DE PÁGINA */
-
-footer {
-    margin-top: 30px;
-    padding: 30px;
-    background-color: #263238;
-    color: #ffffff;
-    text-align: center;
-}
-
-footer img {
-    max-width: 100px;
-    height: auto;
-}
-
-
-/* MODELO CLÁSICO */
+/* ==========================================
+   MODELO CLÁSICO
+   ========================================== */
 
 #vista-previa.modelo-clasico {
     background-color: #ffffff;
     color: #000000;
     font-family: "Times New Roman", Times, serif;
+    padding: 40px;
 }
 
 .modelo-clasico #cv-encabezado {
@@ -305,14 +316,19 @@ footer img {
     border-radius: 0;
 }
 
+.modelo-clasico #cv-foto-perfil {
+    margin: 0 0 15px 0;
+    border-radius: 4px;
+}
+
 .modelo-clasico #cv-nombre {
-    font-size: 32px;
+    font-size: 30px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .modelo-clasico #cv-profesion {
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 18px;
     font-style: italic;
     color: #444444;
 }
@@ -320,7 +336,7 @@ footer img {
 .modelo-clasico #cv-contacto {
     justify-content: flex-start;
     padding-top: 10px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .modelo-clasico #cv-contacto p::after {
@@ -333,11 +349,12 @@ footer img {
 }
 
 .modelo-clasico h3 {
-    margin-top: 25px;
+    margin-top: 20px;
     padding-bottom: 5px;
     color: #000000;
     text-transform: uppercase;
-    border-bottom: 1px solid #cccccc;
+    font-size: 16px;
+    border-bottom: 1px solid #000000;
 }
 
 .modelo-clasico section {
@@ -345,15 +362,13 @@ footer img {
     border-bottom: none;
 }
 
-
-
-  
-/* MODELO MODERNO */
-
+/* ==========================================
+   MODELO MODERNO (Grid Original Restaurado)
+   ========================================== */
 
 #vista-previa.modelo-moderno {
     display: grid;
-    grid-template-columns: 35% 65%; /* Define las dos columnas */
+    grid-template-columns: 35% 65%;
     background-color: #ffffff;
     color: #333333;
     padding: 0;
@@ -362,12 +377,11 @@ footer img {
     overflow: hidden;
 }
 
-
 .modelo-moderno #cv-encabezado {
     display: contents; 
 }
 
-/* COLUMNA IZQUIERDA */
+/* --- COLUMNA IZQUIERDA (Columna 1) --- */
 
 .modelo-moderno #cv-foto-perfil {
     grid-column: 1;
@@ -390,11 +404,11 @@ footer img {
 }
 
 .modelo-moderno #cv-seccion-perfil h3 {
-    background: transparent;
-    color: #333;
+    background: transparent !important;
+    color: #333 !important;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 0;
+    padding: 0 !important;
 }
 
 .modelo-moderno #cv-contacto {
@@ -429,17 +443,17 @@ footer img {
     border: none;
 }
 
-/* COLUMNA DERECHA*/
+/* --- COLUMNA DERECHA (Columna 2) --- */
 
 .modelo-moderno #cv-nombre {
     grid-column: 2;
     grid-row: 1;
-    font-size: 55px;
+    font-size: 42px;
     font-weight: 900;
     color: #1f2937;
     text-transform: uppercase;
     margin: 40px 20px 0 20px;
-    line-height: 0.9;
+    line-height: 1;
     text-align: left;
 }
 
@@ -469,6 +483,7 @@ footer img {
     border: none;
 }
 
+/* Títulos con fondo oscuro */
 .modelo-moderno #cv-seccion-experiencia h3,
 .modelo-moderno #cv-seccion-educacion h3,
 .modelo-moderno #cv-seccion-idiomas h3,
@@ -478,8 +493,8 @@ footer img {
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
-    padding: 5px 0;
-    font-size: 14px;
+    padding: 6px 0;
+    font-size: 13px;
     letter-spacing: 2px;
     border-radius: 0;
     width: 100%;
@@ -487,82 +502,91 @@ footer img {
     margin-bottom: 15px;
 }
 
-/* Iconos de contacto  */
+/* Iconos de contacto */
 .modelo-moderno #cv-email::before { content: "✉️ "; }
 .modelo-moderno #cv-telefono::before { content: "📞 "; }
 .modelo-moderno #cv-ciudad::before { content: "📍 "; }
-   
-   
-   /* MODELO MINIMALISTA */
-   #vista-previa.modelo-minimalista {
-       padding: 50px;
-       background-color: #ffffff;
-       color: #555555;
-       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-   }
-   
-   .modelo-minimalista #cv-encabezado {
-       display: flex;
-       align-items: center;
-       gap: 30px;
-       padding: 0 0 30px;
-       background-color: transparent;
-       color: #222222;
-       text-align: left;
-   }
-   
-   .modelo-minimalista #cv-foto-perfil {
-       margin-bottom: 0;
-       border-radius: 50%;
-       filter: grayscale(100%);
-   }
-   
-   .modelo-minimalista #cv-nombre {
-       font-size: 38px;
-       letter-spacing: -1px;
-   }
-   
-   .modelo-minimalista #cv-profesion {
-       font-weight: 300;
-       color: #888888;
-   }
-   
-   .modelo-minimalista #cv-contacto {
-       justify-content: flex-start;
-       margin-top: 15px;
-       opacity: 0.8;
-   }
-   
-   .modelo-minimalista h3 {
-       padding-bottom: 10px;
-       color: #222222;
-       font-size: 14px;
-       font-weight: 600;
-       letter-spacing: 2px;
-       text-transform: uppercase;
-       border-bottom: 1px solid #eeeeee;
-   }
 
-/* ================================= */
-/* BOTÓN DE DESCARGA PDF (Estilo Moderno) */
-/* ================================= */
+/* ==========================================
+   MODELO MINIMALISTA
+   ========================================== */
+
+#vista-previa.modelo-minimalista {
+    padding: 45px;
+    background-color: #ffffff;
+    color: #555555;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.modelo-minimalista #cv-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0 0 25px 0;
+    background-color: transparent;
+    color: #222222;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+    border-radius: 0;
+}
+
+.modelo-minimalista #cv-foto-perfil {
+    margin: 0;
+    border-radius: 50%;
+}
+
+.modelo-minimalista #cv-nombre {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+.modelo-minimalista #cv-profesion {
+    font-weight: 300;
+    font-size: 18px;
+    color: #777777;
+}
+
+.modelo-minimalista #cv-contacto {
+    justify-content: flex-start;
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.modelo-minimalista h3 {
+    padding-bottom: 6px;
+    color: #222222;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 20px;
+}
+
+.modelo-minimalista section {
+    border-bottom: none;
+    padding: 10px 0;
+}
+
+/* ==========================================
+   BOTÓN DE DESCARGA PDF
+   ========================================== */
 
 #btn-descargar-pdf {
     width: 100%;
-    /* Degradado de colores usando el verde de tu paleta */
     background: linear-gradient(135deg, #1f7679 0%, #004d40 100%);
     color: #ffffff;
     border: none;
     padding: 16px;
-    border-radius: 50px; /* Bordes redondeados tipo píldora */
-    font-size: 18px;
+    border-radius: 50px;
+    font-size: 16px;
     font-weight: bold;
-    letter-spacing: 1px;
-    margin-top: 25px;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
     cursor: pointer;
-    /* Sombra que combina con el color del botón */
     box-shadow: 0 4px 15px rgba(31, 118, 121, 0.4);
-    /* Transición suave para las animaciones */
     transition: all 0.3s ease;
     display: flex;
     justify-content: center;
@@ -570,30 +594,66 @@ footer img {
     gap: 10px;
 }
 
-/* Efecto al pasar el mouse por encima */
 #btn-descargar-pdf:hover {
-    transform: translateY(-3px); /* Levanta el botón ligeramente */
-    box-shadow: 0 8px 25px rgba(31, 118, 121, 0.6); /* Expande la sombra */
-    background: linear-gradient(135deg, #26a69a 0%, #00695c 100%); /* Aclara el color */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(31, 118, 121, 0.5);
+    background: linear-gradient(135deg, #26a69a 0%, #00695c 100%);
 }
 
-/* Efecto al hacer clic */
 #btn-descargar-pdf:active {
-    transform: translateY(1px); /* Hunde el botón */
-    box-shadow: 0 2px 10px rgba(31, 118, 121, 0.4);
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(31, 118, 121, 0.3);
 }
 
-/* CONFIGURACIÓN PARA PDF */
+#btn-descargar-pdf:disabled {
+    background: #9e9e9e;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ==========================================
+   REGLAS PARA EXPORTACIÓN A PDF
+   ========================================== */
+
 #vista-previa section,
-#vista-previa div[style*="margin-bottom"] {
+#vista-previa .item-dinamico,
+#cv-encabezado {
     page-break-inside: avoid;
+    break-inside: avoid;
 }
 
+.html2pdf__container {
+    width: 100% !important;
+}
 
-/* TABLETS */
+/* ==========================================
+   PIE DE PÁGINA
+   ========================================== */
+
+footer {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #263238;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer img {
+    max-width: 100px;
+    height: auto;
+}
+
+footer h3, footer h4, footer h5 {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+/* ==========================================
+   RESPONSIVE (TABLETS Y CELULARES)
+   ========================================== */
 
 @media (max-width: 900px) {
-
     #contenido {
         gap: 20px;
         padding: 20px;
@@ -613,18 +673,15 @@ footer img {
     }
 }
 
-
-/* CELULARES */
 @media (max-width: 768px) {
-
     #contenido {
         flex-direction: column;
-        padding: 20px;
+        padding: 15px;
     }
 
     #formulario {
         width: 100%;
-        padding: 25px;
+        padding: 20px;
     }
 
     #seccion-vista-previa {
@@ -633,8 +690,17 @@ footer img {
     }
 
     #vista-previa {
+        padding: 20px;
+    }
+
+    #vista-previa.modelo-moderno {
+        flex-direction: column;
+    }
+
+    .modelo-moderno #cv-encabezado {
         width: 100%;
-        padding: 25px;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
     }
 
     #modelos {
@@ -643,91 +709,12 @@ footer img {
     }
 
     #modelos article {
-        width: 90%;
-        max-width: 300px;
+        width: 100%;
+        max-width: 320px;
     }
-
-    #cv-contacto {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
-
-    /* Ajustes de modelos en celular */
 
     .modelo-minimalista #cv-encabezado {
         flex-direction: column;
         align-items: flex-start;
-    }
-}
-
-
-/* CELULARES PEQUEÑOS */
-
-@media (max-width: 480px) {
-
-    body > header {
-        padding: 20px;
-    }
-
-    body > header h1 {
-        font-size: 25px;
-    }
-
-    body > header p {
-        font-size: 15px;
-    }
-
-    #frase {
-        padding: 15px;
-    }
-
-    #frase h2 {
-        font-size: 20px;
-    }
-
-    #modelos {
-        padding: 20px;
-    }
-
-    #formulario {
-        width: 100%;
-        padding: 15px;
-    }
-
-    #formulario fieldset {
-        padding: 15px;
-    }
-
-    #formulario legend {
-        font-size: 18px;
-    }
-
-    #vista-previa {
-        padding: 15px;
-    }
-
-    #cv-encabezado {
-        padding: 20px;
-    }
-
-    #cv-nombre {
-        font-size: 25px;
-    }
-
-    #cv-profesion {
-        font-size: 18px;
-    }
-
-    #vista-previa.modelo-minimalista {
-        padding: 25px 15px;
-    }
-
-    .modelo-minimalista #cv-nombre {
-        font-size: 30px;
-    }
-
-    footer {
-        padding: 20px;
     }
 }
