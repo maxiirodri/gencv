@@ -293,49 +293,64 @@ function renderDinamico() {
 }
 
 // ==========================================
-// 6. EXPORTACIÓN A PDF OPTIMIZADA
+// 6. DESCARGAR CV COMO PDF
 // ==========================================
-const btnDescargarPdf = document.getElementById('btn-descargar-pdf');
+
+const btnDescargarPdf =
+    document.getElementById('btn-descargar-pdf');
+
 
 btnDescargarPdf.addEventListener('click', () => {
-    const elementoCV = document.getElementById('vista-previa');
-    const textoOriginal = btnDescargarPdf.innerHTML;
 
-    btnDescargarPdf.innerHTML = '⏳ Generando PDF...';
-    btnDescargarPdf.disabled = true;
+    const elementoCV =
+        document.getElementById('vista-previa');
+
+
+    // ---------- Configuración del PDF ----------
 
     const opciones = {
-        margin: [10, 10, 10, 10],
-        filename: `${inputNombre.value.trim() || 'CV'}_Curriculum.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
+
+        margin: 10,
+
+        filename: 'Mi_Curriculum.pdf',
+
+        image: {
+            type: 'jpeg',
+            quality: 0.98
+        },
+
         html2canvas: {
             scale: 2,
             useCORS: true,
-            scrollY: 0,
-            windowWidth: 1024 // Asegura renderizado de escritorio para el PDF
+            scrollY: 0
         },
+
         jsPDF: {
             unit: 'mm',
             format: 'a4',
             orientation: 'portrait'
-        },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+        }
     };
+
+
+    // ---------- Feedback del botón ----------
+
+    const textoOriginal =
+        btnDescargarPdf.innerHTML;
+
+    btnDescargarPdf.innerHTML =
+        '⏳ Generando PDF...';
+
+
+    // ---------- Generación del PDF ----------
 
     html2pdf()
         .set(opciones)
         .from(elementoCV)
         .save()
         .then(() => {
+
+            // Restauramos el botón
             btnDescargarPdf.innerHTML = textoOriginal;
-            btnDescargarPdf.disabled = false;
-        })
-        .catch((err) => {
-            console.error('Error al generar PDF:', err);
-            btnDescargarPdf.innerHTML = '❌ Error al exportar';
-            setTimeout(() => {
-                btnDescargarPdf.innerHTML = textoOriginal;
-                btnDescargarPdf.disabled = false;
-            }, 3000);
         });
 });
