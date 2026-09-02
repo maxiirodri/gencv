@@ -7,22 +7,20 @@
 
     <title>Generador de Currículums</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Encabezado -->
     <header>
-        <img src="" alt="Logo del generador de currículums">
+        <img src="img/logo.png" alt="Logo del generador de currículums">
 
         <h1>Generador de Currículums</h1>
 
         <p>Creá tu currículum de forma sencilla y rápida</p>
     </header>
 
-
-    <!-- Frase -->
     <section id="frase">
 
         <h2>
@@ -31,8 +29,7 @@
 
     </section>
 
-
-    <!-- Opciones de modelos -->
+    <!---Opciones de modelos -->
     <section id="seccion-modelos">
 
         <div id="modelos">
@@ -41,46 +38,29 @@
 
                 <h3>Modelo clásico</h3>
 
-                <img 
-                    src="https://via.placeholder.com/250x350"
-                    alt="Vista previa del modelo clásico"
-                >
+                <img src="img/1.jfif" alt="Vista previa del modelo clásico" >
 
-                <button type="button" id="modelo-clasico">
-                    Elegir modelo
-                </button>
+                <button type="button" id="modelo-clasico"> Elegir modelo </button>
 
             </article>
-
 
             <article>
 
                 <h3>Modelo moderno</h3>
 
-                <img 
-                    src="https://via.placeholder.com/250x350"
-                    alt="Vista previa del modelo moderno"
-                >
+                <img src="img/2.jfif" alt="Vista previa del modelo moderno" >
 
-                <button type="button" id="modelo-moderno">
-                    Elegir modelo
-                </button>
+                <button type="button" id="modelo-moderno"> Elegir modelo </button>
 
             </article>
-
 
             <article>
 
                 <h3>Modelo minimalista</h3>
 
-                <img 
-                    src="https://via.placeholder.com/250x350"
-                    alt="Vista previa del modelo minimalista"
-                >
+                <img src="img/3.jfif" alt="Vista previa del modelo minimalista" >
 
-                <button type="button" id="modelo-minimalista">
-                    Elegir modelo
-                </button>
+                <button type="button" id="modelo-minimalista"> Elegir modelo </button>
 
             </article>
 
@@ -90,8 +70,8 @@
 
     <div id="contenido">
 
-        
             <!-- Formulario -->
+
             <form id="formulario">
         
                 <!-- Datos personales -->
@@ -99,406 +79,157 @@
         
                     <legend>Datos personales</legend>
         
+                    <label for="nombre"> Nombre: </label>        
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" >
         
-                    <label for="nombre">
-                        Nombre:
-                    </label>
+                    <label for="apellido"> Apellido: </label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ej: Perez" >
         
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Ej: Lucas"
-                    >
+                    <label for="profesion"> Profesión o título: </label>
+                    <input type="text" id="profesion" name="profesion" placeholder="Ej: Analista de Sistemas" >
         
+                    <label for="email"> Correo electrónico: </label>
+                    <input type="email" id="email" name="email" placeholder="Ej: juan@email.com" >
         
-                    <label for="apellido">
-                        Apellido:
-                    </label>
+                    <label for="telefono"> Teléfono: </label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3878123456" >
         
-                    <input
-                        type="text"
-                        id="apellido"
-                        name="apellido"
-                        placeholder="Ej: Palacio"
-                    >
+                    <label for="ciudad"> Ciudad: </label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Ej: San Ramón de la Nueva Orán" >
         
-        
-                    <label for="profesion">
-                        Profesión o título:
-                    </label>
-        
-                    <input
-                        type="text"
-                        id="profesion"
-                        name="profesion"
-                        placeholder="Ej: Analista de Sistemas"
-                    >
-        
-        
-                    <label for="email">
-                        Correo electrónico:
-                    </label>
-        
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Ej: juan@email.com"
-                    >
-        
-        
-                    <label for="telefono">
-                        Teléfono:
-                    </label>
-        
-                    <input
-                        type="tel"
-                        id="telefono"
-                        name="telefono"
-                        placeholder="Ej: 3875123456"
-                    >
-        
-        
-                    <label for="ciudad">
-                        Ciudad:
-                    </label>
-        
-                    <input
-                        type="text"
-                        id="ciudad"
-                        name="ciudad"
-                        placeholder="Ej: San Ramón de la Nueva Orán"
-                    >
-        
-        
-                    <label for="foto">
-                        Foto:
-                    </label>
-        
-                    <input
-                        type="file"
-                        id="foto"
-                        name="foto"
-                        accept="image/*"
-                    >
+                    <label for="foto"> Foto: </label>
+                    <input type="file" id="foto" name="foto" accept="image/*" >
         
                 </fieldset>
-        
         
                 <!-- Perfil profesional -->
                 <fieldset>
         
                     <legend>Perfil profesional</legend>
         
-                    <label for="perfil">
-                        Descripción:
-                    </label>
-        
-                    <textarea
-                        id="perfil"
-                        name="perfil"
-                        rows="5"
-                        placeholder="Escribí una breve descripción sobre vos..."
-                    ></textarea>
+                    <label for="perfil"> Descripción: </label>
+                    <textarea id="perfil" name="perfil" rows="5" placeholder="Escribí una breve descripción sobre vos..." ></textarea>
         
                 </fieldset>
-        
         
                 <!-- Experiencia laboral -->
                 <fieldset>
         
                     <legend>Experiencia laboral</legend>
         
+                    <label for="empresa"> Empresa: </label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa" >
         
-                    <label for="empresa">
-                        Empresa:
-                    </label>
+                    <label for="puesto"> Puesto: </label>
+                    <input type="text" id="puesto" name="puesto" placeholder="Ej: Administrativo" >
         
-                    <input
-                        type="text"
-                        id="empresa"
-                        name="empresa"
-                        placeholder="Nombre de la empresa"
-                    >
+                    <label for="fecha-inicio"> Fecha de inicio: </label>
+                    <input type="month" id="fecha-inicio" name="fecha-inicio" >
         
+                    <label for="fecha-fin"> Fecha de finalización: </label>
+                    <input type="month" id="fecha-fin" name="fecha-fin" >
         
-                    <label for="puesto">
-                        Puesto:
-                    </label>
+                    <label for="descripcion-trabajo"> Descripción: </label>
+                    <textarea id="descripcion-trabajo" name="descripcion-trabajo" rows="4" placeholder="Describí tus tareas y responsabilidades..." ></textarea>
         
-                    <input
-                        type="text"
-                        id="puesto"
-                        name="puesto"
-                        placeholder="Ej: Administrativo"
-                    >
-        
-        
-                    <label for="fecha-inicio">
-                        Fecha de inicio:
-                    </label>
-        
-                    <input
-                        type="month"
-                        id="fecha-inicio"
-                        name="fecha-inicio"
-                    >
-        
-        
-                    <label for="fecha-fin">
-                        Fecha de finalización:
-                    </label>
-        
-                    <input
-                        type="month"
-                        id="fecha-fin"
-                        name="fecha-fin"
-                    >
-        
-        
-                    <label for="descripcion-trabajo">
-                        Descripción:
-                    </label>
-        
-                    <textarea
-                        id="descripcion-trabajo"
-                        name="descripcion-trabajo"
-                        rows="4"
-                        placeholder="Describí tus tareas y responsabilidades..."
-                    ></textarea>
-        
-        
-                    <button
-                        type="button"
-                        id="agregar-experiencia"
-                    >
-                        + Agregar otra experiencia
-                    </button>
+                    <button type="button" id="agregar-experiencia" > + Agregar otra experiencia </button>
         
                 </fieldset>
-        
         
                 <!-- Educación -->
                 <fieldset>
         
                     <legend>Educación</legend>
         
+                    <label for="institucion"> Institución: </label>
+                    <input type="text" id="institucion" name="institucion" placeholder="Ej: Instituto / Universidad" >
         
-                    <label for="institucion">
-                        Institución:
-                    </label>
+                    <label for="titulo"> Título o carrera: </label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Ej: Tecnicatura Superior..." >
         
-                    <input
-                        type="text"
-                        id="institucion"
-                        name="institucion"
-                        placeholder="Ej: Instituto / Universidad"
-                    >
+                    <label for="anio"> Año: </label>
+                    <input type="number" id="anio" name="anio" placeholder="Ej: 2026" >
         
-        
-                    <label for="titulo">
-                        Título o carrera:
-                    </label>
-        
-                    <input
-                        type="text"
-                        id="titulo"
-                        name="titulo"
-                        placeholder="Ej: Tecnicatura Superior..."
-                    >
-        
-        
-                    <label for="anio">
-                        Año:
-                    </label>
-        
-                    <input
-                        type="number"
-                        id="anio"
-                        name="anio"
-                        placeholder="Ej: 2026"
-                    >
-        
-        
-                    <button
-                        type="button"
-                        id="agregar-estudio"
-                    >
-                        + Agregar otro estudio
-                    </button>
+                    <button type="button" id="agregar-estudio" > + Agregar otro estudio </button>
         
                 </fieldset>
-        
         
                 <!-- Habilidades -->
                 <fieldset>
         
                     <legend>Habilidades</legend>
         
+                    <label for="habilidad"> Habilidad: </label>
+                    <input type="text" id="habilidad" name="habilidad" placeholder="Ej: Atención al cliente" >
         
-                    <label for="habilidad">
-                        Habilidad:
-                    </label>
-        
-                    <input
-                        type="text"
-                        id="habilidad"
-                        name="habilidad"
-                        placeholder="Ej: Atención al cliente"
-                    >
-        
-        
-                    <button
-                        type="button"
-                        id="agregar-habilidad"
-                    >
-                        + Agregar otra habilidad
-                    </button>
+                    <button type="button" id="agregar-habilidad" > + Agregar otra habilidad </button>
         
                 </fieldset>
-        
         
                 <!-- Idiomas -->
                 <fieldset>
         
                     <legend>Idiomas</legend>
         
+                    <label for="idioma"> Idioma: </label>
+                    <input type="text" id="idioma" name="idioma" placeholder="Ej: Inglés" >
         
-                    <label for="idioma">
-                        Idioma:
-                    </label>
+                    <label for="nivel-idioma"> Nivel: </label>
+                    <select id="nivel-idioma" name="nivel-idioma" >
         
-                    <input
-                        type="text"
-                        id="idioma"
-                        name="idioma"
-                        placeholder="Ej: Inglés"
-                    >
-        
-        
-                    <label for="nivel-idioma">
-                        Nivel:
-                    </label>
-        
-                    <select
-                        id="nivel-idioma"
-                        name="nivel-idioma"
-                    >
-        
-                        <option value="">
-                            Seleccionar nivel
-                        </option>
-        
-                        <option value="basico">
-                            Básico
-                        </option>
-        
-                        <option value="intermedio">
-                            Intermedio
-                        </option>
-        
-                        <option value="avanzado">
-                            Avanzado
-                        </option>
-        
-                        <option value="nativo">
-                            Nativo
-                        </option>
+                        <option value=""> Seleccionar nivel </option>
+                        <option value="basico"> Básico </option>
+                        <option value="intermedio"> Intermedio </option>
+                        <option value="avanzado"> Avanzado </option>
+                        <option value="nativo"> Nativo </option>
         
                     </select>
         
-        
-                    <button
-                        type="button"
-                        id="agregar-idioma"
-                    >
-                        + Agregar otro idioma
-                    </button>
+                    <button type="button" id="agregar-idioma" > + Agregar otro idioma </button>
         
                 </fieldset>
-        
         
                 <!-- Redes y enlaces -->
                 <fieldset>
         
                     <legend>Redes y enlaces</legend>
         
+                    <label for="nombre-red"> Nombre de la red o sitio: </label>
+                    <input type="text" id="nombre-red" name="nombre-red" placeholder="Ej: LinkedIn, Instagram, Facebook, GitHub..." >
         
-                    <label for="nombre-red">
-                        Nombre de la red o sitio:
-                    </label>
+                    <label for="url-red"> Enlace: </label>
+                    <input type="url" id="url-red" name="url-red" placeholder="https://..." >
         
-                    <input
-                        type="text"
-                        id="nombre-red"
-                        name="nombre-red"
-                        placeholder="Ej: LinkedIn, Instagram, Facebook, GitHub..."
-                    >
-        
-        
-                    <label for="url-red">
-                        Enlace:
-                    </label>
-        
-                    <input
-                        type="url"
-                        id="url-red"
-                        name="url-red"
-                        placeholder="https://..."
-                    >
-        
-        
-                    <button
-                        type="button"
-                        id="agregar-red"
-                    >
-                        + Agregar otra red o enlace
-                    </button>
+                    <button type="button" id="agregar-red" > + Agregar otra red o enlace </button>
         
                 </fieldset>
         
             </form>
-        
         
             <!-- Vista previa -->
             <section id="seccion-vista-previa">
         
                 <h2>Vista previa</h2>
                 
-        
-        
                     <div id="vista-previa">
-            
             
                         <!-- Encabezado del CV -->
                         <div id="cv-encabezado">
+                            <img id="cv-foto-perfil" src="" alt="Foto de perfil" style="display: none;">
             
                             <h1 id="cv-nombre"> Tu nombre aparecerá aquí </h1>
             
-                            <h2 id="cv-profesion">
-                                Tu profesión
-                            </h2>
-            
+                            <h2 id="cv-profesion"> Tu profesión </h2>
             
                             <div id="cv-contacto">
             
-                                <p id="cv-email">
-                                    Tu correo electrónico
-                                </p>
-            
-                                <p id="cv-telefono">
-                                    Tu teléfono
-                                </p>
-            
-                                <p id="cv-ciudad">
-                                    Tu ciudad
-                                </p>
+                                <p id="cv-email"> Tu correo electrónico </p>
+                                <p id="cv-telefono"> Tu teléfono </p>
+                                <p id="cv-ciudad"> Tu ciudad </p>
             
                             </div>
             
                         </div>
-            
             
                         <!-- Perfil -->
                         <section id="cv-seccion-perfil">
@@ -507,14 +238,11 @@
             
                             <div id="cv-perfil">
             
-                                <p>
-                                    Tu descripción aparecerá aquí.
-                                </p>
+                                <p> Tu descripción aparecerá aquí. </p>
             
                             </div>
             
                         </section>
-            
             
                         <!-- Experiencia -->
                         <section id="cv-seccion-experiencia">
@@ -523,14 +251,11 @@
             
                             <div id="cv-experiencia">
             
-                                <p>
-                                    Tu experiencia laboral aparecerá aquí.
-                                </p>
+                                <p> Tu experiencia laboral aparecerá aquí. </p>
             
                             </div>
             
                         </section>
-            
             
                         <!-- Educación -->
                         <section id="cv-seccion-educacion">
@@ -539,14 +264,11 @@
             
                             <div id="cv-educacion">
             
-                                <p>
-                                    Tu formación académica aparecerá aquí.
-                                </p>
+                                <p> Tu formación académica aparecerá aquí. </p>
             
                             </div>
-            
+                            
                         </section>
-            
             
                         <!-- Habilidades -->
                         <section id="cv-seccion-habilidades">
@@ -555,14 +277,11 @@
             
                             <div id="cv-habilidades">
             
-                                <p>
-                                    Tus habilidades aparecerán aquí.
-                                </p>
+                                <p> Tus habilidades aparecerán aquí. </p>
             
                             </div>
             
                         </section>
-            
             
                         <!-- Idiomas -->
                         <section id="cv-seccion-idiomas">
@@ -571,14 +290,11 @@
             
                             <div id="cv-idiomas">
             
-                                <p>
-                                    Tus idiomas aparecerán aquí.
-                                </p>
+                                <p> Tus idiomas aparecerán aquí. </p>
             
                             </div>
             
                         </section>
-            
             
                         <!-- Redes -->
                         <section id="cv-seccion-redes">
@@ -587,44 +303,39 @@
             
                             <div id="cv-redes">
             
-                                <p>
-                                    Tus redes y enlaces aparecerán aquí.
-                                </p>
+                                <p> Tus redes y enlaces aparecerán aquí. </p>
             
                             </div>
             
                         </section>
             
                     </div>
-                
-        
-        
+
+                    <!--BOTÓN DE DESCARGA -->
+                    <button type="button" id="btn-descargar-pdf"> 📄 Descargar CV en PDF </button>
         
             </section>
 
-
-
     </div>
-
 
     <!-- Pie de página -->
     <footer>
 
-        <img src="" alt="Logo del proyecto">
+        <img src="img/logo.png" alt="Logo del proyecto">
 
-        <h3>
-            Generador de Currículums
-        </h3>
+        <h3> Generador de Currículums </h3>
 
-        <h4>
-            Proyecto de exposición
-        </h4>
+        <h4> Proyecto de exposición </h4>
 
-        <h5>
-            Rodríguez Maximiliano; Palacio Lucas
-        </h5>
+        <h5> Rodríguez Maximiliano; Palacio Lucas </h5>
 
     </footer>
+    <!-- 1. LIBRERÍA HTML2PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!--java script-->
+
+    <script src="app.js"></script>
 
 
 </body>
