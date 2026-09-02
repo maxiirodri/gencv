@@ -44,51 +44,61 @@ header img {
    OPCIONES DE MODELOS
    ========================================== */
 
+/* MODELOS DE CURRÍCULUM */
+
+/* MODELOS DE CURRÍCULUM */
+
+#seccion-modelos {
+    width: 100%;
+    padding: 30px; /* Mismo padding horizontal que #contenido */
+}
+
 #modelos {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 30px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas exactamente iguales */
+    gap: 30px; /* Mismo espacio que separa el formulario de la vista previa */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #modelos article {
-    width: 250px;
-    padding: 20px;
+    width: 100%;
+    padding: 25px;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 2px 5px #cfd8dc;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-#modelos article:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #modelos article h3 {
     color: #263238;
+    font-size: 20px;
     margin-top: 0;
+    margin-bottom: 15px;
 }
 
 #modelos img {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
 }
 
 #modelos button {
-    margin-top: 15px;
-    padding: 10px 20px;
+    margin-top: 20px;
+    padding: 12px 24px;
     background-color: #1f7679;
     color: #ffffff;
     border: none;
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 8px;
+    font-size: 15px;
     font-weight: bold;
+    cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
@@ -670,7 +680,9 @@ footer h3, footer h4, footer h5 {
     }
 }
 
+/* CELULARES */
 @media (max-width: 768px) {
+
     #contenido {
         flex-direction: column;
         padding: 15px;
@@ -687,27 +699,36 @@ footer h3, footer h4, footer h5 {
     }
 
     #vista-previa {
+        width: 100%;
         padding: 20px;
     }
 
-    #vista-previa.modelo-moderno {
-        flex-direction: column;
-    }
-
-    .modelo-moderno #cv-encabezado {
+    /* FIX MODELOS EN CELULAR (1 sola columna y sin desborde) */
+    #seccion-modelos {
+        padding: 20px 15px;
         width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #e0e0e0;
+        box-sizing: border-box;
     }
 
     #modelos {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 0;
     }
 
     #modelos article {
         width: 100%;
-        max-width: 320px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #cv-contacto {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
 
     .modelo-minimalista #cv-encabezado {
