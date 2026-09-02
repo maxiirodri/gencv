@@ -1,38 +1,33 @@
-/* ================================= */
-/* PÁGINA */
-/* ================================= */
+/* 
+   CONFIGURACIÓN GENERAL*/
 
 * {
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     background-color: #eceff1;
     font-family: Arial, sans-serif;
-    margin: 0;
 }
 
 
-/* ================================= */
 /* ENCABEZADO */
-/* ================================= */
 
-body > header {
+header {
     background-color: #263238;
     padding: 30px;
     text-align: center;
     color: #ffffff;
 }
 
-body > header img {
-    max-width: 100px;
+header img {
+    max-width: 150px;
     height: auto;
 }
 
 
-/* ================================= */
 /* FRASE */
-/* ================================= */
 
 #frase {
     background-color: #cfd8dc;
@@ -46,46 +41,50 @@ body > header img {
 }
 
 
-/* ================================= */
-/* MODELOS */
-/* ================================= */
+/* MODELOS DE CURRÍCULUM */
 
 #modelos {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 30px;
     padding: 30px;
     flex-wrap: wrap;
+   
 }
 
 #modelos article {
-    background-color: #ffffff;
+    width: 250px;
     padding: 20px;
+    background-color: #ffffff;
     border-radius: 10px;
     text-align: center;
-    width: 250px;
     box-shadow: 0 2px 5px #cfd8dc;
 }
 
 #modelos article h3 {
     color: #263238;
+    
+  
+    
 }
 
 #modelos img {
+    display: block;
     width: 100%;
     height: auto;
     border-radius: 10px;
-    display: block;
 }
 
 #modelos button {
+    margin-top: 15px;
+    padding: 10px 20px;
     background-color: #1f7679;
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    margin-top: 15px;
     border-radius: 10px;
     cursor: pointer;
+    
 }
 
 #modelos button:hover {
@@ -93,105 +92,89 @@ body > header img {
 }
 
 
-/* ================================= */
 /* CONTENEDOR PRINCIPAL */
-/* ================================= */
 
 #contenido {
     display: flex;
     align-items: flex-start;
     gap: 30px;
-    padding: 30px;
     width: 100%;
+    padding: 30px;
 }
 
 
-/* ================================= */
 /* FORMULARIO */
-/* ================================= */
 
 #formulario {
-    background-color: #263238;
-    padding: 40px;
     width: calc(50% - 15px);
+    padding: 40px;
+    background-color: #263238;
     border-radius: 10px;
 }
 
-
-/* ================================= */
 /* SECCIONES DEL FORMULARIO */
-/* ================================= */
 
 #formulario fieldset {
+    margin: 0 0 20px;
+    padding: 25px;
     border: 1px solid #1f7679;
     border-radius: 10px;
-    padding: 25px;
-    margin: 0 0 20px 0;
 }
-
-
-/* Títulos */
 
 #formulario legend {
+    padding: 5px;
     color: #ffffff;
     font-size: 20px;
-    padding: 5px;
 }
-
-
-/* Etiquetas */
 
 #formulario label {
-    color: #ffffff;
+    display: block;
     padding-top: 10px;
     padding-bottom: 5px;
-    display: block;
+    color: #ffffff;
 }
 
 
-/* Campos */
+/* CAMPOS DEL FORMULARIO */
 
-#formulario input {
+#formulario input,
+#formulario textarea,
+#formulario select {
     border: 1px solid #1f7679;
     border-radius: 10px;
+}
+
+#formulario input {
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    width: 100%;
 }
 
 #formulario textarea {
-    border: 1px solid #1f7679;
-    border-radius: 10px;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    width: 100%;
     resize: vertical;
     font-family: Arial, sans-serif;
 }
-
-
-/* Select */
 
 #formulario select {
     width: 250px;
     max-width: 100%;
     height: 35px;
-    border-radius: 10px;
-    border: 1px solid #1f7679;
     padding: 5px;
     margin-bottom: 10px;
 }
 
 
-/* Botones */
-
+/* BOTONES DEL FORMULARIO */
 #formulario button {
+    margin-top: 10px;
+    padding: 10px 15px;
     background-color: #1f7679;
     color: #ffffff;
     border: none;
     border-radius: 10px;
-    padding: 10px 15px;
-    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -200,51 +183,42 @@ body > header img {
 }
 
 
-/* ================================= */
-/* ================================= */
-/* VISTA PREVIA */
-/* ================================= */
+/* COLUMNA DE VISTA PREVIA */
 
 #seccion-vista-previa {
     width: calc(50% - 15px);
     min-width: 0;
-    
-    /* 1. Hacemos sticky a toda la columna derecha */
+
+    /* Mantiene la vista previa visible al desplazarse */
     position: sticky;
     top: 20px;
-    
-    /* 2. Permite que el sticky se active correctamente en flexbox */
     align-self: flex-start;
 }
 
 #seccion-vista-previa > h2 {
+    margin-top: 0;
     text-align: center;
     color: #263238;
-    margin-top: 0;
 }
 
-/* CV */
+
+/* VISTA PREVIA DEL CV */
 
 #vista-previa {
-    background-color: #ffffff;
     width: 100%;
     padding: 40px;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 8px #cfd8dc;
-    
-    /* Dejá position en static o quitalo, ya que el sticky lo maneja el padre */
     position: static;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
-
-/* ================================= */
 /* ENCABEZADO DEL CV */
-/* ================================= */
 
 #cv-encabezado {
-    background-color: #1f7679;
     padding: 30px;
+    background-color: #1f7679;
     color: #ffffff;
     text-align: center;
     border-radius: 10px;
@@ -258,10 +232,7 @@ body > header img {
     margin-top: 10px;
 }
 
-
-/* ================================= */
-/* CONTACTO */
-/* ================================= */
+/* CONTACTO DEL CV */
 
 #cv-contacto {
     display: flex;
@@ -275,9 +246,7 @@ body > header img {
 }
 
 
-/* ================================= */
 /* SECCIONES DEL CV */
-/* ================================= */
 
 #vista-previa section {
     padding: 15px;
@@ -288,24 +257,29 @@ body > header img {
     color: #1f7679;
 }
 
-
-/* Texto */
-
 #vista-previa p {
     color: #263238;
 }
 
 
-/* ================================= */
+/* FOTO DE PERFIL */
+
+#cv-foto-perfil {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+
 /* PIE DE PÁGINA */
-/* ================================= */
 
 footer {
-    background-color: #263238;
-    padding: 30px;
-    text-align: center;
-    color: #ffffff;
     margin-top: 30px;
+    padding: 30px;
+    background-color: #263238;
+    color: #ffffff;
+    text-align: center;
 }
 
 footer img {
@@ -314,9 +288,309 @@ footer img {
 }
 
 
+/* MODELO CLÁSICO */
+
+#vista-previa.modelo-clasico {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.modelo-clasico #cv-encabezado {
+    padding: 10px 0 20px;
+    background-color: transparent;
+    color: #000000;
+    text-align: left;
+    border-bottom: 2px solid #000000;
+    border-radius: 0;
+}
+
+.modelo-clasico #cv-nombre {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.modelo-clasico #cv-profesion {
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    color: #444444;
+}
+
+.modelo-clasico #cv-contacto {
+    justify-content: flex-start;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.modelo-clasico #cv-contacto p::after {
+    content: " | ";
+    margin-left: 10px;
+}
+
+.modelo-clasico #cv-contacto p:last-child::after {
+    content: "";
+}
+
+.modelo-clasico h3 {
+    margin-top: 25px;
+    padding-bottom: 5px;
+    color: #000000;
+    text-transform: uppercase;
+    border-bottom: 1px solid #cccccc;
+}
+
+.modelo-clasico section {
+    padding: 10px 0;
+    border-bottom: none;
+}
+
+
+
+  
+/* MODELO MODERNO */
+
+
+#vista-previa.modelo-moderno {
+    display: grid;
+    grid-template-columns: 35% 65%; /* Define las dos columnas */
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: none;
+    overflow: hidden;
+}
+
+
+.modelo-moderno #cv-encabezado {
+    display: contents; 
+}
+
+/* COLUMNA IZQUIERDA */
+
+.modelo-moderno #cv-foto-perfil {
+    grid-column: 1;
+    grid-row: 1;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 40px auto 10px auto;
+    border: none;
+    box-shadow: -15px -15px 0 -5px #1f2937, 0 0 0 5px #ffffff;
+}
+
+.modelo-moderno #cv-seccion-perfil {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0 20px;
+    text-align: center;
+    border: none;
+}
+
+.modelo-moderno #cv-seccion-perfil h3 {
+    background: transparent;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0;
+}
+
+.modelo-moderno #cv-contacto {
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    font-size: 13px;
+    align-items: flex-start;
+}
+
+.modelo-moderno #cv-seccion-idiomas {
+    grid-column: 1;
+    grid-row: 4;
+    padding: 0 20px;
+    border: none;
+}
+
+.modelo-moderno #cv-seccion-habilidades {
+    grid-column: 1;
+    grid-row: 5;
+    padding: 0 20px;
+    border: none;
+}
+
+.modelo-moderno #cv-seccion-redes {
+    grid-column: 1;
+    grid-row: 6;
+    padding: 0 20px 20px 20px;
+    border: none;
+}
+
+/* COLUMNA DERECHA*/
+
+.modelo-moderno #cv-nombre {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 55px;
+    font-weight: 900;
+    color: #1f2937;
+    text-transform: uppercase;
+    margin: 40px 20px 0 20px;
+    line-height: 0.9;
+    text-align: left;
+}
+
+.modelo-moderno #cv-profesion {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 18px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 20px 20px 20px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.modelo-moderno #cv-seccion-experiencia {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+    padding: 0 40px 0 20px;
+    border: none;
+}
+
+.modelo-moderno #cv-seccion-educacion {
+    grid-column: 2;
+    grid-row: 5 / span 2;
+    padding: 0 40px 20px 20px;
+    border: none;
+}
+
+.modelo-moderno #cv-seccion-experiencia h3,
+.modelo-moderno #cv-seccion-educacion h3,
+.modelo-moderno #cv-seccion-idiomas h3,
+.modelo-moderno #cv-seccion-habilidades h3,
+.modelo-moderno #cv-seccion-redes h3 {
+    background-color: #1f2937;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 0;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Iconos de contacto  */
+.modelo-moderno #cv-email::before { content: "✉️ "; }
+.modelo-moderno #cv-telefono::before { content: "📞 "; }
+.modelo-moderno #cv-ciudad::before { content: "📍 "; }
+   
+   
+   /* MODELO MINIMALISTA */
+   #vista-previa.modelo-minimalista {
+       padding: 50px;
+       background-color: #ffffff;
+       color: #555555;
+       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   }
+   
+   .modelo-minimalista #cv-encabezado {
+       display: flex;
+       align-items: center;
+       gap: 30px;
+       padding: 0 0 30px;
+       background-color: transparent;
+       color: #222222;
+       text-align: left;
+   }
+   
+   .modelo-minimalista #cv-foto-perfil {
+       margin-bottom: 0;
+       border-radius: 50%;
+       filter: grayscale(100%);
+   }
+   
+   .modelo-minimalista #cv-nombre {
+       font-size: 38px;
+       letter-spacing: -1px;
+   }
+   
+   .modelo-minimalista #cv-profesion {
+       font-weight: 300;
+       color: #888888;
+   }
+   
+   .modelo-minimalista #cv-contacto {
+       justify-content: flex-start;
+       margin-top: 15px;
+       opacity: 0.8;
+   }
+   
+   .modelo-minimalista h3 {
+       padding-bottom: 10px;
+       color: #222222;
+       font-size: 14px;
+       font-weight: 600;
+       letter-spacing: 2px;
+       text-transform: uppercase;
+       border-bottom: 1px solid #eeeeee;
+   }
+
 /* ================================= */
+/* BOTÓN DE DESCARGA PDF (Estilo Moderno) */
+/* ================================= */
+
+#btn-descargar-pdf {
+    width: 100%;
+    /* Degradado de colores usando el verde de tu paleta */
+    background: linear-gradient(135deg, #1f7679 0%, #004d40 100%);
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 50px; /* Bordes redondeados tipo píldora */
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    cursor: pointer;
+    /* Sombra que combina con el color del botón */
+    box-shadow: 0 4px 15px rgba(31, 118, 121, 0.4);
+    /* Transición suave para las animaciones */
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Efecto al pasar el mouse por encima */
+#btn-descargar-pdf:hover {
+    transform: translateY(-3px); /* Levanta el botón ligeramente */
+    box-shadow: 0 8px 25px rgba(31, 118, 121, 0.6); /* Expande la sombra */
+    background: linear-gradient(135deg, #26a69a 0%, #00695c 100%); /* Aclara el color */
+}
+
+/* Efecto al hacer clic */
+#btn-descargar-pdf:active {
+    transform: translateY(1px); /* Hunde el botón */
+    box-shadow: 0 2px 10px rgba(31, 118, 121, 0.4);
+}
+
+/* CONFIGURACIÓN PARA PDF */
+#vista-previa section,
+#vista-previa div[style*="margin-bottom"] {
+    page-break-inside: avoid;
+}
+
+
 /* TABLETS */
-/* ================================= */
 
 @media (max-width: 900px) {
 
@@ -326,8 +600,8 @@ footer img {
     }
 
     #formulario {
-        padding: 25px;
         width: calc(50% - 10px);
+        padding: 25px;
     }
 
     #seccion-vista-previa {
@@ -340,10 +614,7 @@ footer img {
 }
 
 
-/* ================================= */
 /* CELULARES */
-/* ================================= */
-
 @media (max-width: 768px) {
 
     #contenido {
@@ -358,15 +629,10 @@ footer img {
 
     #seccion-vista-previa {
         width: 100%;
+        position: static;
     }
 
-    /*
-       En celular quitamos sticky porque
-       las dos columnas pasan a ser una sola.
-    */
-
     #vista-previa {
-        position: static;
         width: 100%;
         padding: 25px;
     }
@@ -386,12 +652,17 @@ footer img {
         align-items: center;
         gap: 5px;
     }
+
+    /* Ajustes de modelos en celular */
+
+    .modelo-minimalista #cv-encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 
-/* ================================= */
 /* CELULARES PEQUEÑOS */
-/* ================================= */
 
 @media (max-width: 480px) {
 
@@ -446,6 +717,14 @@ footer img {
 
     #cv-profesion {
         font-size: 18px;
+    }
+
+    #vista-previa.modelo-minimalista {
+        padding: 25px 15px;
+    }
+
+    .modelo-minimalista #cv-nombre {
+        font-size: 30px;
     }
 
     footer {
