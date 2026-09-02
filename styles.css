@@ -44,19 +44,15 @@ header img {
    OPCIONES DE MODELOS
    ========================================== */
 
-/* MODELOS DE CURRÍCULUM */
-
-/* MODELOS DE CURRÍCULUM */
-
 #seccion-modelos {
     width: 100%;
-    padding: 30px; /* Mismo padding horizontal que #contenido */
+    padding: 30px;
 }
 
 #modelos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas exactamente iguales */
-    gap: 30px; /* Mismo espacio que separa el formulario de la vista previa */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     width: 100%;
     margin: 0 auto;
     padding: 0;
@@ -197,7 +193,6 @@ header img {
     background-color: #006064;
 }
 
-/* Estilo para botón Quitar de bloques dinámicos */
 .btn-eliminar-item {
     background-color: #c62828 !important;
     color: #ffffff !important;
@@ -243,7 +238,7 @@ header img {
     word-wrap: break-word;
 }
 
-/* ENCABEZADO BASE DEL CV */
+/* ENCABEZADO BASE */
 #cv-encabezado {
     padding: 30px;
     background-color: #1f7679;
@@ -284,7 +279,7 @@ header img {
     margin: 0;
 }
 
-/* SECCIONES BASE DEL CV */
+/* SECCIONES BASE */
 #vista-previa section {
     padding: 15px 0;
     border-bottom: 1px solid #cfd8dc;
@@ -307,18 +302,18 @@ header img {
 }
 
 /* ==========================================
-   MODELO CLÁSICO
+   MODELO CLÁSICO (Escala Amplia)
    ========================================== */
 
 #vista-previa.modelo-clasico {
     background-color: #ffffff;
     color: #000000;
     font-family: "Times New Roman", Times, serif;
-    padding: 40px;
+    padding: 50px;
 }
 
 .modelo-clasico #cv-encabezado {
-    padding: 10px 0 20px;
+    padding: 10px 0 25px;
     background-color: transparent;
     color: #000000;
     text-align: left;
@@ -327,26 +322,30 @@ header img {
 }
 
 .modelo-clasico #cv-foto-perfil {
-    margin: 0 0 15px 0;
+    margin: 0 0 20px 0;
     border-radius: 4px;
+    width: 130px;
+    height: 130px;
 }
 
 .modelo-clasico #cv-nombre {
-    font-size: 30px;
+    font-size: 38px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 .modelo-clasico #cv-profesion {
-    font-size: 18px;
+    font-size: 22px;
     font-style: italic;
-    color: #444444;
+    color: #333333;
+    margin-top: 8px;
 }
 
 .modelo-clasico #cv-contacto {
     justify-content: flex-start;
-    padding-top: 10px;
-    font-size: 13px;
+    padding-top: 15px;
+    font-size: 15px;
+    gap: 10px;
 }
 
 .modelo-clasico #cv-contacto p::after {
@@ -359,21 +358,28 @@ header img {
 }
 
 .modelo-clasico h3 {
-    margin-top: 20px;
-    padding-bottom: 5px;
+    margin-top: 25px;
+    padding-bottom: 8px;
     color: #000000;
     text-transform: uppercase;
-    font-size: 16px;
-    border-bottom: 1px solid #000000;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-bottom: 1.5px solid #000000;
 }
 
 .modelo-clasico section {
-    padding: 10px 0;
+    padding: 15px 0;
     border-bottom: none;
 }
 
+.modelo-clasico p,
+.modelo-clasico li {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
 /* ==========================================
-   MODELO MODERNO (Grid Original Restaurado)
+   MODELO MODERNO (Escala Amplia Original)
    ========================================== */
 
 #vista-previa.modelo-moderno {
@@ -391,7 +397,7 @@ header img {
     display: contents; 
 }
 
-/* --- COLUMNA IZQUIERDA (Columna 1) --- */
+/* --- COLUMNA IZQUIERDA --- */
 
 .modelo-moderno #cv-foto-perfil {
     grid-column: 1;
@@ -400,7 +406,7 @@ header img {
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 40px auto 10px auto;
+    margin: 40px auto 15px auto;
     border: none;
     box-shadow: -15px -15px 0 -5px #1f2937, 0 0 0 5px #ffffff;
 }
@@ -415,10 +421,12 @@ header img {
 
 .modelo-moderno #cv-seccion-perfil h3 {
     background: transparent !important;
-    color: #333 !important;
+    color: #333333 !important;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 0 !important;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .modelo-moderno #cv-contacto {
@@ -427,43 +435,43 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 20px;
-    font-size: 13px;
+    padding: 25px 20px;
+    font-size: 14px;
     align-items: flex-start;
 }
 
 .modelo-moderno #cv-seccion-idiomas {
     grid-column: 1;
     grid-row: 4;
-    padding: 0 20px;
+    padding: 10px 20px;
     border: none;
 }
 
 .modelo-moderno #cv-seccion-habilidades {
     grid-column: 1;
     grid-row: 5;
-    padding: 0 20px;
+    padding: 10px 20px;
     border: none;
 }
 
 .modelo-moderno #cv-seccion-redes {
     grid-column: 1;
     grid-row: 6;
-    padding: 0 20px 20px 20px;
+    padding: 10px 20px 30px 20px;
     border: none;
 }
 
-/* --- COLUMNA DERECHA (Columna 2) --- */
+/* --- COLUMNA DERECHA --- */
 
 .modelo-moderno #cv-nombre {
     grid-column: 2;
     grid-row: 1;
-    font-size: 42px;
+    font-size: 55px;
     font-weight: 900;
     color: #1f2937;
     text-transform: uppercase;
     margin: 40px 20px 0 20px;
-    line-height: 1;
+    line-height: 0.95;
     text-align: left;
 }
 
@@ -471,10 +479,10 @@ header img {
     grid-column: 2;
     grid-row: 2;
     font-size: 18px;
-    color: #555;
+    color: #555555;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 10px 20px 20px 20px;
+    margin: 15px 20px 25px 20px;
     text-align: left;
     font-weight: 500;
 }
@@ -482,18 +490,17 @@ header img {
 .modelo-moderno #cv-seccion-experiencia {
     grid-column: 2;
     grid-row: 3 / span 2;
-    padding: 0 40px 0 20px;
+    padding: 10px 40px 10px 20px;
     border: none;
 }
 
 .modelo-moderno #cv-seccion-educacion {
     grid-column: 2;
     grid-row: 5 / span 2;
-    padding: 0 40px 20px 20px;
+    padding: 10px 40px 30px 20px;
     border: none;
 }
 
-/* Títulos con fondo oscuro */
 .modelo-moderno #cv-seccion-experiencia h3,
 .modelo-moderno #cv-seccion-educacion h3,
 .modelo-moderno #cv-seccion-idiomas h3,
@@ -504,80 +511,89 @@ header img {
     text-transform: uppercase;
     text-align: center;
     padding: 6px 0;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 2px;
     border-radius: 0;
     width: 100%;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
-/* Iconos de contacto */
 .modelo-moderno #cv-email::before { content: "✉️ "; }
 .modelo-moderno #cv-telefono::before { content: "📞 "; }
 .modelo-moderno #cv-ciudad::before { content: "📍 "; }
 
 /* ==========================================
-   MODELO MINIMALISTA
+   MODELO MINIMALISTA (Escala Amplia)
    ========================================== */
 
 #vista-previa.modelo-minimalista {
-    padding: 45px;
+    padding: 55px;
     background-color: #ffffff;
-    color: #555555;
+    color: #444444;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .modelo-minimalista #cv-encabezado {
     display: flex;
     align-items: center;
-    gap: 25px;
-    padding: 0 0 25px 0;
+    gap: 30px;
+    padding: 0 0 35px 0;
     background-color: transparent;
-    color: #222222;
+    color: #111111;
     text-align: left;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1.5px solid #eaeaea;
     border-radius: 0;
 }
 
 .modelo-minimalista #cv-foto-perfil {
     margin: 0;
+    width: 135px;
+    height: 135px;
     border-radius: 50%;
 }
 
 .modelo-minimalista #cv-nombre {
-    font-size: 32px;
+    font-size: 40px;
     letter-spacing: -0.5px;
     font-weight: 700;
 }
 
 .modelo-minimalista #cv-profesion {
     font-weight: 300;
-    font-size: 18px;
-    color: #777777;
+    font-size: 20px;
+    color: #666666;
+    margin-top: 6px;
 }
 
 .modelo-minimalista #cv-contacto {
     justify-content: flex-start;
-    margin-top: 10px;
-    font-size: 13px;
-    opacity: 0.85;
+    margin-top: 15px;
+    font-size: 14px;
+    gap: 20px;
+    opacity: 0.9;
 }
 
 .modelo-minimalista h3 {
-    padding-bottom: 6px;
-    color: #222222;
-    font-size: 13px;
+    padding-bottom: 8px;
+    color: #111111;
+    font-size: 15px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    border-bottom: 1px solid #eeeeee;
-    margin-top: 20px;
+    border-bottom: 1.5px solid #eaeaea;
+    margin-top: 30px;
 }
 
 .modelo-minimalista section {
     border-bottom: none;
-    padding: 10px 0;
+    padding: 15px 0;
+}
+
+.modelo-minimalista p,
+.modelo-minimalista li {
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 /* ==========================================
@@ -633,7 +649,6 @@ header img {
     break-inside: avoid;
 }
 
-
 /* ==========================================
    PIE DE PÁGINA
    ========================================== */
@@ -680,9 +695,7 @@ footer h3, footer h4, footer h5 {
     }
 }
 
-/* CELULARES */
 @media (max-width: 768px) {
-
     #contenido {
         flex-direction: column;
         padding: 15px;
@@ -703,7 +716,6 @@ footer h3, footer h4, footer h5 {
         padding: 20px;
     }
 
-    /* FIX MODELOS EN CELULAR (1 sola columna y sin desborde) */
     #seccion-modelos {
         padding: 20px 15px;
         width: 100%;
